@@ -1,0 +1,41 @@
+[Environment]
+1. Node version(node-v): v12.18.2
+2. Type script Version(tsc -v): 3.8.3
+3. Google Chrome version(chrome://version/):107.0.5304.89 (Official Build)
+4. Operating system:Windows 11 Home 22H2
+
+[Run application]
+Server: 
+1. CMD navigate to "mailbag\server"
+2. Execute "npm run compile"
+3. See "MailBag server open for requests" log on CMD
+
+Client: 
+1. CMD navigate to "mailbag\client"
+2. Execute "npm run build"
+3. See "webpack compiled successfully" log on CMD
+
+[Test]
+1. Visit "http://127.0.0.1" on browser
+2. Clicke "NEW MESSATE" button to send an email
+(1)Fill out "To" and "Subject", "Content" input box
+(2)Click "Send" button to send the email
+3. Click "NEW CONTACT" button to add new caontact
+(1)Fill out "Name" and "Email" input box
+(2)Click "SAVE"
+4. Click right hand side Contact list
+(1)Modify contact name or email, then click "UPDATE" button
+(2)Click "DELETE" button to delete a contact
+(3)Click SEND EMAIL to direct to send email page
+5. Click left side function list "Inbox" to view all emails
+6. Click left side function list "Sent" to write a new email
+7. Use post man to test contact functions
+(1)Get: send request to "http://127.0.0.1/contacts" to get contact list
+(2)Post: send request to "http://127.0.0.1/contacts" to add a contact
+(3)Put: send request to "http://127.0.0.1/contacts" to update a contact
+(4)Delete: send request to "http://127.0.0.1/contacts/id=xxxxx", to delete a contact
+
+
+[How REST helps your web application]
+1. REST API supports client-server separation so each part can evolve independently.
+2. Servier side REST can handle multiple types of calls, return different data that client side requests.
